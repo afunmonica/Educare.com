@@ -136,7 +136,12 @@ export default function EducareLanding() {
               <div className="text-lg font-semibold">Ready to simplify your school operations?</div>
               <div className="text-sm text-blue-100">Get a free walkthrough — no commitment.</div>
             </div>
-            <a href="#contact" className="px-5 py-2 bg-white text-blue-700 rounded-md font-medium shadow hover:shadow-md">Book a Demo</a>
+            <a
+              href="mailto:aprimedigitalsolution@gmail.com?subject=Educare%20Demo%20Request&body=Hello%20Aprime%20Digital%20Solution%2C%0D%0A%0D%0AI%20would%20like%20to%20book%20a%20demo%20for%20Educare.%20Please%20contact%20me%20with%20available%20times.%0D%0A%0D%0AThanks."
+              className="px-5 py-2 bg-white text-blue-700 rounded-md font-medium shadow hover:shadow-md"
+            >
+              Book a Demo
+            </a>
           </div>
         </section>
 
@@ -159,7 +164,6 @@ function FeatureCard({ title, desc, icon }) {
 }
 
 function PriceCard({ title, price, perks = [], featured = false, color = "blue" }) {
-  // Predeclare classes explicitly so Tailwind can see them
   const colorStyles = {
     blue: {
       featuredContainer: "bg-blue-700 text-white shadow-lg",
@@ -183,12 +187,10 @@ function PriceCard({ title, price, perks = [], featured = false, color = "blue" 
       ctaDefault: "bg-purple-600 text-white",
     },
   };
-
   const palette = colorStyles[color] || colorStyles.blue;
   const containerClass = featured ? palette.featuredContainer : palette.defaultContainer;
   const listTextClass = featured ? palette.mutedText : "text-gray-700";
   const ctaClass = featured ? palette.ctaFeatured : palette.ctaDefault;
-
   return (
     <div className={`p-6 rounded-lg ${containerClass}`}>
       <div className="text-lg font-semibold">{title}</div>
