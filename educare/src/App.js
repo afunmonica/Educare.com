@@ -33,37 +33,56 @@ export default function EducareLanding() {
           <div className="pointer-events-none absolute -top-8 -left-8 h-24 w-24 rounded-full bg-blue-200/50 blur-2xl"></div>
           <div className="pointer-events-none absolute -bottom-8 -right-8 h-28 w-28 rounded-full bg-indigo-200/50 blur-2xl"></div>
         </div>
-        <div className="max-w-3xl mx-auto grid grid-cols-1 gap-8 items-start text-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-medium ring-1 ring-blue-200">New • 2025 Release</div>
-            <h1 className="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-blue-800 tracking-tight">Educare — Smart School Management</h1>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="text-center lg:text-left">
+            <h1 className="mt-1 text-4xl md:text-5xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-blue-800 via-indigo-700 to-blue-700 bg-clip-text text-transparent">Educare — Smart School Management</h1>
             <p className="mt-5 text-lg text-gray-600">Manage students, teachers, fees and inventory from one cloud-based platform. Faster admin, transparent fees, and real-time reports for heads of school and parents.</p>
 
-            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
               <a href="#contact" className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Request Demo</a>
               <a href="#pricing" className="px-6 py-3 border border-blue-600 text-blue-700 rounded-md hover:bg-blue-50">View Pricing</a>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition text-left">
                 <div className="text-sm text-gray-500">Students</div>
                 <div className="font-semibold">Registration & Records</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition text-left">
                 <div className="text-sm text-gray-500">Teachers</div>
                 <div className="font-semibold">Schedules & Payroll</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition text-left">
                 <div className="text-sm text-gray-500">Fees</div>
                 <div className="font-semibold">Payments & Receipts</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition text-left">
                 <div className="text-sm text-gray-500">Inventory</div>
                 <div className="font-semibold">Stock & Canteen</div>
               </div>
             </div>
           </div>
-          
+
+          <div className="hidden lg:block">
+            <div className="relative h-[360px] rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-white ring-1 ring-blue-200/60 shadow-lg overflow-hidden">
+              <div className="absolute -top-6 -left-6 h-28 w-28 bg-blue-300/30 blur-2xl rounded-full"></div>
+              <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-indigo-300/30 blur-2xl rounded-full"></div>
+              <div className="absolute inset-0 grid grid-cols-3 gap-4 p-6 opacity-90">
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm col-span-2"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
+                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm col-span-2"></div>
+              </div>
+              <div className="absolute bottom-4 right-4 flex gap-2">
+                <span className="px-3 py-1 text-xs rounded-full bg-white/90 text-blue-700 ring-1 ring-blue-200">Secure</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/90 text-blue-700 ring-1 ring-blue-200">Fast setup</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Features section */}
