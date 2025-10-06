@@ -3,22 +3,22 @@ import React from "react";
 
 export default function EducareLanding() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-white text-gray-800">
       {/* Top navigation */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-lg bg-blue-700 flex items-center justify-center text-white font-bold">A</div>
+            <div className="h-10 w-10 rounded-lg bg-blue-700 flex items-center justify-center text-white font-bold shadow-sm">A</div>
             <div>
-              <div className="text-lg font-semibold">Aprime Digital Solution</div>
-              <div className="text-sm text-gray-500">Educare — School Management System</div>
+              <div className="text-base font-semibold tracking-tight">Aprime Digital Solution</div>
+              <div className="text-xs text-gray-500">Educare — School Management</div>
             </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#features" className="hover:text-blue-700">Features</a>
-            <a href="#pricing" className="hover:text-blue-700">Pricing</a>
-            <a href="#about" className="hover:text-blue-700">About</a>
+            <a href="#features" className="hover:text-blue-700 transition-colors">Features</a>
+            <a href="#pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
+            <a href="#about" className="hover:text-blue-700 transition-colors">About</a>
             <a href="#contact" className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700">Contact</a>
           </nav>
 
@@ -29,30 +29,35 @@ export default function EducareLanding() {
 
       {/* Hero */}
       <main className="max-w-6xl mx-auto px-6 py-16 lg:py-24">
+        <div className="relative">
+          <div className="pointer-events-none absolute -top-8 -left-8 h-24 w-24 rounded-full bg-blue-200/50 blur-2xl"></div>
+          <div className="pointer-events-none absolute -bottom-8 -right-8 h-28 w-28 rounded-full bg-indigo-200/50 blur-2xl"></div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-blue-800">Educare — Smart School Management</h1>
-            <p className="mt-6 text-lg text-gray-600">Manage students, teachers, fees and inventory from one cloud-based platform. Faster admin, transparent fees, and real-time reports for heads of school and parents.</p>
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-medium ring-1 ring-blue-200">New • 2025 Release</div>
+            <h1 className="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-blue-800 tracking-tight">Educare — Smart School Management</h1>
+            <p className="mt-5 text-lg text-gray-600">Manage students, teachers, fees and inventory from one cloud-based platform. Faster admin, transparent fees, and real-time reports for heads of school and parents.</p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#contact" className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700">Request Demo</a>
-              <a href="#pricing" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50">View Pricing</a>
+              <a href="#contact" className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Request Demo</a>
+              <a href="#pricing" className="px-6 py-3 border border-blue-600 text-blue-700 rounded-md hover:bg-blue-50">View Pricing</a>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
                 <div className="text-sm text-gray-500">Students</div>
                 <div className="font-semibold">Registration & Records</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
                 <div className="text-sm text-gray-500">Teachers</div>
                 <div className="font-semibold">Schedules & Payroll</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
                 <div className="text-sm text-gray-500">Fees</div>
                 <div className="font-semibold">Payments & Receipts</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
                 <div className="text-sm text-gray-500">Inventory</div>
                 <div className="font-semibold">Stock & Canteen</div>
               </div>
@@ -67,10 +72,10 @@ export default function EducareLanding() {
           <p className="text-gray-600 mt-2">Everything a modern school needs — organized in clear modules.</p>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FeatureCard title="Student Management" desc="Registration, personal records, attendance, performance tracking and parent contacts." />
-            <FeatureCard title="Teacher Management" desc="Teacher profiles, timetables, payroll items and leave management." />
-            <FeatureCard title="Fee Management" desc="Flexible fee setups, receipts, outstanding tracking and payment reports." />
-            <FeatureCard title="Inventory Management" desc="Stock control for textbooks, canteen items, assets and purchase logs." />
+            <FeatureCard title="Student Management" desc="Registration, personal records, attendance, performance tracking and parent contacts." icon="🎓" />
+            <FeatureCard title="Teacher Management" desc="Teacher profiles, timetables, payroll items and leave management." icon="👩‍🏫" />
+            <FeatureCard title="Fee Management" desc="Flexible fee setups, receipts, outstanding tracking and payment reports." icon="💳" />
+            <FeatureCard title="Inventory Management" desc="Stock control for textbooks, canteen items, assets and purchase logs." icon="📦" />
           </div>
         </section>
 
@@ -120,16 +125,30 @@ export default function EducareLanding() {
           </div>
         </section>
 
+        {/* CTA band */}
+        <section className="mt-16">
+          <div className="rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 sm:p-8 text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div className="text-lg font-semibold">Ready to simplify your school operations?</div>
+              <div className="text-sm text-blue-100">Get a free walkthrough — no commitment.</div>
+            </div>
+            <a href="#contact" className="px-5 py-2 bg-white text-blue-700 rounded-md font-medium shadow hover:shadow-md">Book a Demo</a>
+          </div>
+        </section>
+
         <footer className="mt-12 text-center text-xs text-gray-500 pb-8">Built with care for schools, Aprime Digital Solution</footer>
       </main>
     </div>
   );
 }
 
-function FeatureCard({ title, desc }) {
+function FeatureCard({ title, desc, icon }) {
   return (
-    <div className="bg-white p-5 rounded-lg shadow-sm">
-      <div className="font-semibold text-blue-700">{title}</div>
+    <div className="bg-white p-5 rounded-lg shadow-sm hover:shadow transition">
+      <div className="flex items-center gap-2">
+        {icon ? <span className="text-xl" aria-hidden>{icon}</span> : null}
+        <div className="font-semibold text-blue-700">{title}</div>
+      </div>
       <div className="text-sm text-gray-600 mt-2">{desc}</div>
     </div>
   );
