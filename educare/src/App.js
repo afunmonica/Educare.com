@@ -64,22 +64,8 @@ export default function EducareLanding() {
           </div>
 
           <div className="hidden lg:block">
-            <div className="relative h-[360px] rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-white ring-1 ring-blue-200/60 shadow-lg overflow-hidden">
-              <div className="absolute -top-6 -left-6 h-28 w-28 bg-blue-300/30 blur-2xl rounded-full"></div>
-              <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-indigo-300/30 blur-2xl rounded-full"></div>
-              <div className="absolute inset-0 grid grid-cols-3 gap-4 p-6 opacity-90">
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm col-span-2"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
-                <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm col-span-2"></div>
-              </div>
-              <div className="absolute bottom-4 right-4 left-4">
-                <img src="/educare.png" alt="dashboard" className="w-full rounded-md border" />
-              </div>
+            <div className="relative h-[420px] rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-white ring-1 ring-blue-200/60 shadow-lg overflow-hidden">
+              <img src="/educare.png" alt="dashboard" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
