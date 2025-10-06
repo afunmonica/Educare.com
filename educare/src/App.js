@@ -33,18 +33,18 @@ export default function EducareLanding() {
           <div className="pointer-events-none absolute -top-8 -left-8 h-24 w-24 rounded-full bg-blue-200/50 blur-2xl"></div>
           <div className="pointer-events-none absolute -bottom-8 -right-8 h-28 w-28 rounded-full bg-indigo-200/50 blur-2xl"></div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 gap-8 items-start text-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-medium ring-1 ring-blue-200">New • 2025 Release</div>
             <h1 className="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-blue-800 tracking-tight">Educare — Smart School Management</h1>
             <p className="mt-5 text-lg text-gray-600">Manage students, teachers, fees and inventory from one cloud-based platform. Faster admin, transparent fees, and real-time reports for heads of school and parents.</p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <a href="#contact" className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Request Demo</a>
               <a href="#pricing" className="px-6 py-3 border border-blue-600 text-blue-700 rounded-md hover:bg-blue-50">View Pricing</a>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
               <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition">
                 <div className="text-sm text-gray-500">Students</div>
                 <div className="font-semibold">Registration & Records</div>
