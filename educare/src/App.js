@@ -89,9 +89,9 @@ export default function EducareLanding() {
           <p className="text-gray-600 mt-2">Simple, transparent pricing — local currency (GHS).</p>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <PriceCard title="Starter" price="GHS 1,000" perks={["Basic modules","Up to 300 students","Email support"]} />
-            <PriceCard title="Standard" price="GHS 2,500" perks={["All modules","Up to 1,500 students","Priority support"]} featured />
-            <PriceCard title="Enterprise" price="GHS 5,000" perks={["Custom integrations","Unlimited students","On-site training"]} />
+            <PriceCard title="Basic" price="GHS 150" perks={["Monthly","All features inclusive"]} color="green" />
+            <PriceCard title="Standard" price="GHS 500" perks={["Termly","All features inclusive"]} featured color="blue" />
+            <PriceCard title="Enterprise" price="GHS 1800" perks={["Annual","All features inclusive"]} color="purple" />
           </div>
         </section>
 
@@ -158,18 +158,48 @@ function FeatureCard({ title, desc, icon }) {
   );
 }
 
-function PriceCard({ title, price, perks = [], featured = false }) {
+function PriceCard({ title, price, perks = [], featured = false, color = "blue" }) {
+  // Predeclare classes explicitly so Tailwind can see them
+  const colorStyles = {
+    blue: {
+      featuredContainer: "bg-blue-700 text-white shadow-lg",
+      defaultContainer: "bg-white shadow-sm ring-1 ring-blue-200",
+      mutedText: "text-blue-100",
+      ctaFeatured: "bg-white text-blue-700",
+      ctaDefault: "bg-blue-600 text-white",
+    },
+    green: {
+      featuredContainer: "bg-green-700 text-white shadow-lg",
+      defaultContainer: "bg-white shadow-sm ring-1 ring-green-200",
+      mutedText: "text-green-100",
+      ctaFeatured: "bg-white text-green-700",
+      ctaDefault: "bg-green-600 text-white",
+    },
+    purple: {
+      featuredContainer: "bg-purple-700 text-white shadow-lg",
+      defaultContainer: "bg-white shadow-sm ring-1 ring-purple-200",
+      mutedText: "text-purple-100",
+      ctaFeatured: "bg-white text-purple-700",
+      ctaDefault: "bg-purple-600 text-white",
+    },
+  };
+
+  const palette = colorStyles[color] || colorStyles.blue;
+  const containerClass = featured ? palette.featuredContainer : palette.defaultContainer;
+  const listTextClass = featured ? palette.mutedText : "text-gray-700";
+  const ctaClass = featured ? palette.ctaFeatured : palette.ctaDefault;
+
   return (
-    <div className={`p-6 rounded-lg ${featured ? "bg-blue-700 text-white shadow-lg" : "bg-white shadow-sm"}`}>
+    <div className={`p-6 rounded-lg ${containerClass}`}>
       <div className="text-lg font-semibold">{title}</div>
       <div className="mt-4 text-2xl font-bold">{price}</div>
       <ul className="mt-4 space-y-2 text-sm">
         {perks.map((p, i) => (
-          <li key={i} className={featured ? "text-blue-100" : "text-gray-700"}>• {p}</li>
+          <li key={i} className={listTextClass}>• {p}</li>
         ))}
       </ul>
       <div className="mt-6">
-        <a className={`inline-block px-4 py-2 rounded ${featured ? "bg-white text-blue-700" : "bg-blue-600 text-white"}`} href="#contact">Get Started</a>
+        <a className={`inline-block px-4 py-2 rounded ${ctaClass}`} href="#contact">Get Started</a>
       </div>
     </div>
   );
