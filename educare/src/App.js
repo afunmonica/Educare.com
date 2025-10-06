@@ -77,9 +77,8 @@ export default function EducareLanding() {
                 <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm"></div>
                 <div className="rounded-xl bg-white/70 ring-1 ring-white/60 shadow-sm col-span-2"></div>
               </div>
-              <div className="absolute bottom-4 right-4 flex gap-2">
-                <span className="px-3 py-1 text-xs rounded-full bg-white/90 text-blue-700 ring-1 ring-blue-200">Secure</span>
-                <span className="px-3 py-1 text-xs rounded-full bg-white/90 text-blue-700 ring-1 ring-blue-200">Fast setup</span>
+              <div className="absolute bottom-4 right-4 left-4">
+                <img src="/educare.png" alt="dashboard" className="w-full rounded-md border" />
               </div>
             </div>
           </div>
